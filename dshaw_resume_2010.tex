@@ -1,0 +1,146 @@
+% resume.tex
+%
+% (c) 2002 Matthew Boedicker <mboedick@mboedick.org> (original author) http://mboedick.org
+% (c) 2003 David J. Grant <dgrant@ieee.org> http://www.davidgrant.ca
+% (c) 2007 Todd C. Miller <Todd.Miller@courtesan.com> http://www.courtesan.com/todd
+% (c) 2009 Derek R. Hildreth <derek@derekhildreth.com> http://www.derekhildreth.com 
+% (c) 2010 David Shaw <dshaw.jobs@gmail.com> http://www.github.com/davidshaw
+%This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/1.0/ or send a letter to Creative Commons, 559 Nathan Abbott Way, Stanford, California 94305, USA.
+
+
+\documentclass[letterpaper,11pt]{article}
+
+%-----------------------------------------------------------
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage[pdftex]{hyperref}
+\hypersetup{
+    colorlinks,%
+    citecolor=black,%
+    filecolor=black,%
+    linkcolor=black,%
+    urlcolor=mygreylink,%     % can put red here to visualize the links
+}
+\urlstyle{same}
+\definecolor{mygrey}{gray}{.85}
+\definecolor{mygreylink}{gray}{.30}
+\textheight=9.0in
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-1in}%was -0.375 -- |move_to_left|
+\addtolength{\evensidemargin}{0.25in}
+\addtolength{\textwidth}{0.5in}
+\addtolength{\topmargin}{-1.25in}%was also -0.375
+\addtolength{\textheight}{0.75in}
+
+%-----------------------------------------------------------
+%Custom commands
+\newcommand{\resitem}[1]{\item #1 \vspace{-2pt}}
+\newcommand{\resheading}[1]{{\large \colorbox{mygrey}{\begin{minipage}{\textwidth}{\textbf{#1 \vphantom{p\^{E}}}}\end{minipage}}}}
+\newcommand{\ressubheading}[4]{
+\begin{tabular*}{6.5in}{l@{\extracolsep{\fill}}r}
+		\textbf{#1} & #2 \\
+		\textit{#3} & \textit{#4} \\
+\end{tabular*}\vspace{-6pt}}
+%-----------------------------------------------------------
+
+%-----------------------------------------------------------
+%General Resume Tips
+%   No periods!  Technically, nothing in this document is a full sentence.
+%   Use parallelism by ending key words with the same thing,  i.e. "Coordinated; Designed; Communicated".
+%   More tips on bottom of this LaTeX document.
+%-----------------------------------------------------------
+
+\begin{document}
+\thispagestyle{empty}
+\newcommand{\mywebheader}{
+\begin{tabular*}{7in}{l@{\extracolsep{\fill}}r}
+	\textbf{{\LARGE David Shaw}} & {dshaw.jobs@gmail.com}
+	\end{tabular*}
+\\
+\vspace{0.1in}}
+
+% CHANGE HEADER SOURCE HERE
+\mywebheader
+
+%%%%%%%%%%%%%%%%%%%%%%
+%\resheading{Education}
+%	\begin{itemize}
+%		\item
+%			\ressubheading{\href{http://www.byui.edu}{Brigham Young University - Idaho}}{Rexburg, ID}{\href{http://www.byui.edu/csee/compe/default.htm}{Bachelor of Science in Computer Engineering}; \href{http://www.derekhildreth.com/portfolio/unofficial_transcript.pdf}{GPA:3.00}}{Jan. 2004 -- Dec. 2009}
+%				{ \footnotesize
+%				\begin{itemize}
+%					%\resitem{\textbf{Available for internship: July 23, 2009; Graduation follows internship}}
+%					\resitem{Key Courses: \href{http://www.byui.edu/catalog/2004-2005/class.asp1045.htm}{Computer Architecture}, \href{http://www.byui.edu/catalog/2004-2005/class.asp1069.htm}{Digital Systems Design}, \href{http://www.byui.edu/catalog/2004-2005/class.asp1070.htm}{Microprocessors and Microcontrollers}, \href{http://www.byui.edu/catalog/2004-2005/class.asp1068.htm}{Electronic Devices and Circuits}, \href{http://www.byui.edu/catalog/2004-2005/class.asp1066.htm}{Electrical Circuit Analysis}, \href{http://www.byui.edu/catalog/2004-2005/class.asp1073.htm}{Data Communications}, \href{http://www.byui.edu/catalog/2004-2005/class.asp2213.htm}{Engineering Math}, \href{http://www.byui.edu/catalog/2004-2005/class.asp2786.htm}{Engineering Physics}, \href{http://www.byui.edu/catalog/2004-2005/class.asp1075.htm}{Feedback Control}, \href{http://www.byui.edu/catalog/2004-2005/class.asp1072.htm}{Real-Time and Embedded Systems}, \href{http://www.byui.edu/catalog/2004-2005/class.asp1069.htm}{Digital Systems Design}}, \href{http://www.byui.edu/catalog/2004-2005/class.asp1074.htm}{Senior Project}
+%					\resitem{\textbf{\href{http://www.byui.edu/Societies/Linux/}{BYU-Idaho Linux/Unix Society:}}} 
+%						\begin{itemize}
+%							\resitem{\href{http://www.byui.edu/Societies/Linux/officersResponsibilities.htm}{Mentoring Coordinator (Web Development)} - Coordinated members of the society with new students}
+%							\resitem{\href{http://www.byui.edu/Societies/Linux/officersResponsibilities.htm}{Secretary} - Documented and updated \href{http://www.byui.edu/Societies/Linux/default.htm}{society webpage} and communicated with \href{http://www.byui.edu/BusandComm/}{other departments}} 
+%							\resitem{Performed undergraduate research on \href{http://www.derekhildreth.com/portfolio/Research/Web_2.0_and_Beyond_Report_Column_Format.pdf}{Web 2.0 and Beyond}}
+%						\end{itemize}
+%				\end{itemize}
+%				}
+%\begin{comment}
+%		\item
+%			\ressubheading{\href{http://bcc.billings.k12.mt.us/}{Billings Career Center}}{Billings, MT}{\href{http://www.cisco.com/web/learning/netacad/index.html}{Cisco Networking Academy}; GPA:3.33}{Aug. 2002 - May 2003}
+%				{ \footnotesize
+%				\begin{itemize}
+%				\resitem{Graduated \href{http://www.cisco.com/web/learning/netacad/index.html}{Cisco Semester Four} comprising of coursework in networking infrastructures including LAN and WAN design and implementation}
+%				\end{itemize}
+%				}
+%\end{comment}
+%	\end{itemize} % End Education list
+
+%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Experience}
+	\begin{description}
+	\item\ressubheading{{Redspin, Inc.}}{Carpinteria, CA}{Lead Security Engineer}{Aug. 2009 -- Present}
+				{ \footnotesize
+				\begin{itemize}
+					\resitem{Performed external and web application penetration tests for use in PCI, HIPAA and NERC compliance. Created reports detailing issue, impact and recommendation for each finding. Assisted clients with finding mitigation, working with a variety of complex systems.}
+					\resitem{Worked on various research and development projects including a zero-day vulnerability scanner, a data stealing USB ``drop'' key, various internal shell and Ruby scripts}
+					\resitem{Performed social engineering assessments including e-mail and telephone scripts to snatch domain credentials.}
+				\end{itemize}
+				}
+	\item\ressubheading{{Secure Science Corporation}}{San Diego, CA}{Security Researcher}{May -- Sep. 2007}
+				{ \footnotesize
+				\begin{itemize}
+					\resitem{Worked as part of the External Threat Assessment Team, interacting with clients and ISP's as part of anti-phishing efforts. I created a perl script to join phishing group IRC channels (gleaned from malicious C99 installs) to monitor for URLs, effectively pre-empting duplicate attacks.}
+					\resitem{Assisted in malware analysis}
+				\end{itemize}
+          			}
+	\item\ressubheading{{Softwink, Inc. Global Network Security}}{(Remote Work) Boone, NC}{Network Security Analyst}{May -- Sep. 2006}
+				{ \footnotesize
+				\begin{itemize}
+					\resitem{Analyzed live snort log outputs from perimeter IDS boxes on large banks and law firms across the Eastern seaboard. Interacted with clients when alerts warranted immediate attention, as well as through monthly status reports.}
+					\resitem{Worked with a minimal existing codebase to better categorize incoming alerts through our Snort PHP front end.}
+				\end{itemize}
+				}
+	\item\ressubheading{{University of California, San Diego}}{La Jolla, CA}{Database Engineer}{May -- Sep. 2005}
+				{ \footnotesize
+				\begin{itemize}
+					\resitem{Interned with the Computer Vision department, managing a SQL database of contacts throughout the department.}
+				\end{itemize}
+				}
+	\item\ressubheading{{San Diego Supercomputer Center at UCSD}}{La Jolla, CA}{Programming Intern}{June -- Sep. 2004}
+				{ \footnotesize
+				\begin{itemize}
+					\resitem{Interned with a programming team working on integrating SDSC GIS servers into the OpenCroquet 3D operating system using Squeak/Smalltalk. I implemented netcode for relaying data from GIS servers to the 3D environment.}
+				\end{itemize}
+				}
+	\end{description}  % End Experience list
+
+%%%%%%%%%%%%%%%%%%%%%%
+\resheading{{Skills}}
+	\begin{description}
+		\item[Security:] { \footnotesize Extensive experience performing penetration tests of large corporate networks using nmap, Nessus, Burp Suite, firewalk, sip-vicious, nikto, as well as experience manually testing for Cross-Site Scripting, SQL injection and otherwise unsanitized input.}
+		\item[OS:] { \footnotesize Extensive experience using and administrating *nix environments including FreeBSD, Gentoo, Arch Linux, Debian and Red Hat.}
+		\item[Languages:] { \footnotesize Ruby, Lua, NSE (Nmap Scripting Engine), bash}
+		\item[Projects:] { \footnotesize Source code for my various open source projects (including the TeX source for this document) is available at \href{http://www.github.com/davidshaw}{http://github.com/davidshaw}}
+	\end{description} % End Skills list
+\end{document}
